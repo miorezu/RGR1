@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5302ef53-ee00-46b4-b787-40161b97430e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RGR1AdditionalLibs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/consoleTasks/DerivativeApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/consoleTasks/FileListInterpolation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/consoleTasks/NumMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RGR1AdditionalLibs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RGR1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Evaluatable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/Evaluatable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/FFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interpolator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/Interpolator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ListInterpolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/ListInterpolation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/Point2D.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2eHCj9rnGJ5Mx0uMF2HUrzSowTt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -24,9 +44,31 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/university/2course/CrossPlatfP/RGR1"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\university\2course\CrossPlatfP\RGR1AdditionalLibs\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="RGR1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="RGR1" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

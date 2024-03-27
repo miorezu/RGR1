@@ -1,10 +1,12 @@
+package consoleTasks;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-public class ListInterpolation extends Interpolator {
-    private List<Point2D> data = null;
-    public ListInterpolation(List<Point2D> data) {
+    public class ListInterpolation extends Interpolator {
+        private List<Point2D> data = null;
+        public ListInterpolation(List<Point2D> data) {
 // TODO Auto-generated constructor stub
         this.data = data;
     }
@@ -60,6 +62,9 @@ public class ListInterpolation extends Interpolator {
 // TODO Auto-generated method stub
         ListInterpolation fun = new ListInterpolation();
 
+/*самостійно додати перевірку неперевірених методів.
+Перевірити, яким чином помилка інтерполяції залежить від того, на яку кількість
+частин розбитий інтервал, на якому виконується інтерполяція функції.*/
 
         int num;
         double x;

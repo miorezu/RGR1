@@ -1,3 +1,5 @@
+package consoleTasks;
+
 public abstract class Point {
     private double[] coords = null;
     public Point(int num) {

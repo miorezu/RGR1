@@ -1,4 +1,6 @@
-public abstract class Interpolator implements Evaluatable{
+package consoleTasks;
+
+public abstract class Interpolator implements Evaluatable {
     abstract public void clear();
     abstract public int numPoints();
     abstract public void addPoint(Point2D pt);
