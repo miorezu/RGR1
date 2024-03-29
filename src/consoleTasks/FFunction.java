@@ -21,15 +21,10 @@ public class FFunction implements Evaluatable {
 
     @Override
     public double evalf(double x) {
-// TODO Auto-generated method stub
         return Math.exp(-a * x * x) * Math.sin(x);
     }
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
-// TODO Auto-generated method stub
         System.out.println("Перевірка класу FFunction");
         FFunction fun = new FFunction();
         java.util.Scanner in = new java.util.Scanner(System.in);

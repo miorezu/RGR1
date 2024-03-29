@@ -2,15 +2,21 @@ package consoleTasks;
 
 public abstract class Interpolator implements Evaluatable {
     abstract public void clear();
+
     abstract public int numPoints();
+
     abstract public void addPoint(Point2D pt);
+
     abstract public Point2D getPoint(int i);
+
     abstract public void setPoint(int i, Point2D pt);
+
     abstract public void removeLastPoint();
+
     abstract public void sort();
+
     @Override
     public double evalf(double x) {
-// TODO Auto-generated method stub
         double res = 0.0;
         int numData = numPoints();
         double numer, denom;
@@ -23,7 +29,7 @@ public abstract class Interpolator implements Evaluatable {
                     denom = denom * (getPoint(k).getX() - getPoint(j).getX());
                 }
             }
-            res = res + getPoint(k).getY()*numer/denom;
+            res = res + getPoint(k).getY() * numer / denom;
         }
         return res;
     }

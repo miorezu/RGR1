@@ -1,16 +1,15 @@
 package consoleTasks;
+
 import java.io.*;
+
 public class DerivativeApplication {
-    /**
-     * @param args
-     */
+
     public static void main(String[] args) throws IOException {
-// TODO Auto-generated method stub
-        Evaluatable functs[] = new Evaluatable[3];
+        Evaluatable functs[] = new Evaluatable[2];
         functs[0] = new FFunction(0.5);
         functs[1] = new FileListInterpolation();
         try {
-            ((FileListInterpolation) functs[2]).readFromFile("TblFunc.dat");
+            ((FileListInterpolation) functs[1]).readFromFile("TblFunc.dat");
         } catch (IOException ex) {
             ex.printStackTrace();
             System.exit(-1);

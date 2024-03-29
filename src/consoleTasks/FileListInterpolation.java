@@ -1,11 +1,13 @@
 package consoleTasks;
+
 import java.io.*;
 import java.util.*;
+
 public class FileListInterpolation extends ListInterpolation {
     public FileListInterpolation() {
         super();
-// TODO Auto-generated constructor stub
     }
+
     public void readFromFile(String fileName) throws IOException {
         BufferedReader in = new BufferedReader(new FileReader(fileName));
         String s = in.readLine(); // читання рядка із заголовками стовпців
@@ -18,6 +20,7 @@ public class FileListInterpolation extends ListInterpolation {
         }
         in.close();
     }
+
     public void writeToFile(String fileName) throws IOException {
         PrintWriter out = new PrintWriter(new FileWriter(fileName));
         out.printf("%9s%25s\n", "x", "y");
@@ -26,11 +29,8 @@ public class FileListInterpolation extends ListInterpolation {
         }
         out.close();
     }
-    /**
-     * @param args
-     */
+
     public static void main(String[] args) {
-// TODO Auto-generated method stub
         FileListInterpolation fun = new FileListInterpolation();
         int num;
         double x;
@@ -40,25 +40,24 @@ public class FileListInterpolation extends ListInterpolation {
             num = in.nextInt();
         } while (num <= 0);
         for (int i = 0; i < num; i++) {
-            x = 1.0 + (5.0 - 1.0)*Math.random();
+            x = 1.0 + (5.0 - 1.0) * Math.random();
             fun.addPoint(new Point2D(x, Math.sin(x)));
         }
         System.out.println("Інтерполяція по: " + fun.numPoints() + " точкам");
         System.out.println("Несортований набір: ");
         for (int i = 0; i < fun.numPoints(); i++)
-            System.out.println("Точка " + (i+1) + ": " + fun.getPoint(i));
+            System.out.println("Точка " + (i + 1) + ": " + fun.getPoint(i));
         fun.sort();
         System.out.println("Відсортований набір: ");
         for (int i = 0; i < fun.numPoints(); i++)
-            System.out.println("Точка " + (i+1) + ": " + fun.getPoint(i));
+            System.out.println("Точка " + (i + 1) + ": " + fun.getPoint(i));
         System.out.println("Мінімальне значення x: " + fun.getPoint(0).getX());
         System.out.println("Максимальне значення x: " +
-                fun.getPoint(fun.numPoints()-1).getX());
+                fun.getPoint(fun.numPoints() - 1).getX());
         System.out.println("Зберігаємо у файл");
         try {
             fun.writeToFile("data.dat");
-        }
-        catch (IOException ex) {
+        } catch (IOException ex) {
             ex.printStackTrace();
             System.exit(-1);
         }
@@ -66,25 +65,24 @@ public class FileListInterpolation extends ListInterpolation {
         fun.clear();
         try {
             fun.readFromFile("data.dat");
-        }
-        catch (IOException ex) {
+        } catch (IOException ex) {
             ex.printStackTrace();
             System.exit(-1);
         }
         System.out.println("Дані з файлу: ");
         fun.sort();
         for (int i = 0; i < fun.numPoints(); i++)
-            System.out.println("Точка " + (i+1) + ": " + fun.getPoint(i));
+            System.out.println("Точка " + (i + 1) + ": " + fun.getPoint(i));
         System.out.println("Мінімальне значення x: " + fun.getPoint(0).getX());
         System.out.println("Максимальне значення x: " +
-                fun.getPoint(fun.numPoints()-1).getX());
-        x = 0.5*(fun.getPoint(0).getX() +
-                fun.getPoint(fun.numPoints()-1).getX());
+                fun.getPoint(fun.numPoints() - 1).getX());
+        x = 0.5 * (fun.getPoint(0).getX() +
+                fun.getPoint(fun.numPoints() - 1).getX());
         System.out.println("Значення інтерполяції fun(" + x + ") = " +
                 fun.evalf(x));
         System.out.println("Точне значення sin(" + x + ") = " + Math.sin(x));
         System.out.println("Абсолютна помилка = " +
-                Math.abs(fun.evalf(x)-Math.sin(x)));
+                Math.abs(fun.evalf(x) - Math.sin(x)));
         System.out.println("Готуємо дані для розрахунку");
         fun.clear();
         for (x = 1.0; x <= 7.0; x += 0.1) {
@@ -92,8 +90,7 @@ public class FileListInterpolation extends ListInterpolation {
         }
         try {
             fun.writeToFile("TblFunc.dat");
-        }
-        catch (IOException ex) {
+        } catch (IOException ex) {
             ex.printStackTrace();
             System.exit(-1);
         }
