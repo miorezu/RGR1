@@ -1,9 +1,7 @@
 package consoleTasks;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.io.IOException;
+import java.util.*;
 
 public class ListInterpolation extends Interpolator {
     private List<Point2D> data = null;
@@ -18,8 +16,7 @@ public class ListInterpolation extends Interpolator {
 
     public ListInterpolation(Point2D[] data) {
         this();
-        for (Point2D pt : data)
-            this.data.add(pt);
+        this.data.addAll(Arrays.asList(data));
     }
 
     @Override
@@ -53,7 +50,9 @@ public class ListInterpolation extends Interpolator {
     }
 
     @Override
-    public void sort() {Collections.sort(data);}
+    public void sort() {
+        Collections.sort(data);
+    }
 
     public static void main(String[] args) {
         ListInterpolation fun = new ListInterpolation();
@@ -79,7 +78,16 @@ public class ListInterpolation extends Interpolator {
         System.out.println("Відсортований набір: ");
         for (int i = 0; i < fun.numPoints(); i++)
             System.out.println("Точка " + (i + 1) + ": " + fun.getPoint(i));
-
+        System.out.println("Мінімальне значення x: " + fun.getPoint(0).getX());
+        System.out.println("Максимальне значення x: " +
+                fun.getPoint(fun.numPoints() - 1).getX());
+        System.out.println("Зберігаємо у файл");
+        try {
+            FileManager.writeToFile("data.csv", fun);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            System.exit(-1);
+        }
         fun.clear();
         System.out.println("Після видалення всіх точок: кількість точок = " + fun.numPoints());
 
@@ -110,5 +118,40 @@ public class ListInterpolation extends Interpolator {
             }
         }
         System.out.println("Мінімальна помилка (" + minError + ") досягнута при " + minParts + " частинах.");
+
+        System.out.println("Зчитуємо з файлу");
+        fun.clear();
+        try {
+            FileManager.readFromFile("data.csv", fun);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            System.exit(-1);
+        }
+        System.out.println("Дані з файлу: ");
+        fun.sort();
+        for (int i = 0; i < fun.numPoints(); i++)
+            System.out.println("Точка " + (i + 1) + ": " + fun.getPoint(i));
+        System.out.println("Мінімальне значення x: " + fun.getPoint(0).getX());
+        System.out.println("Максимальне значення x: " +
+                fun.getPoint(fun.numPoints() - 1).getX());
+        x = 0.5 * (fun.getPoint(0).getX() +
+                fun.getPoint(fun.numPoints() - 1).getX());
+        System.out.println("Значення інтерполяції fun(" + x + ") = " +
+                fun.evalf(x));
+        System.out.println("Точне значення sin(" + x + ") = " + Math.sin(x));
+        System.out.println("Абсолютна помилка = " +
+                Math.abs(fun.evalf(x) - Math.sin(x)));
+        System.out.println("Готуємо дані для розрахунку");
+        fun.clear();
+        for (x = 1.0; x <= 7.0; x += 0.1) {
+            fun.addPoint(new Point2D(x, Math.sin(x)));
+        }
+        try {
+            FileManager.writeToFile("TblFunc.csv", fun);
+            FileManager.writeToFile("TblFunc.dat", fun);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            System.exit(-1);
+        }
     }
 }

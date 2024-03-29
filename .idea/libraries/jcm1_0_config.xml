@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="jcm1.0-config">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/jcm1.0-config.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/jcommon-1.0.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/jfreechart-1.0.19.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>

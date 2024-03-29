@@ -7,9 +7,9 @@ public class DerivativeApplication {
     public static void main(String[] args) throws IOException {
         Evaluatable functs[] = new Evaluatable[2];
         functs[0] = new FFunction(0.5);
-        functs[1] = new FileListInterpolation();
+        functs[1] = new ListInterpolation();
         try {
-            ((FileListInterpolation) functs[1]).readFromFile("TblFunc.dat");
+            FileManager.readFromFile("TblFunc.dat", (ListInterpolation) functs[1]);
         } catch (IOException ex) {
             ex.printStackTrace();
             System.exit(-1);

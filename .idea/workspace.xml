@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5302ef53-ee00-46b4-b787-40161b97430e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/consoleTasks/FileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jcm1_0_config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/consoleTasks/TreeMapInterpolation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/consoleTasks/TreeSetInterpolation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/JFreeChartMainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jcm1.0-config.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jcommon-1.0.23.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jfreechart-1.0.19.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RGR1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RGR1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/consoleTasks/DerivativeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/DerivativeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/consoleTasks/FFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/FFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/consoleTasks/FileListInterpolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/FileListInterpolation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/consoleTasks/Interpolator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/Interpolator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/consoleTasks/FileListInterpolation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/consoleTasks/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/consoleTasks/ListInterpolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/ListInterpolation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/consoleTasks/NumMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/NumMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/consoleTasks/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/consoleTasks/Point2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/consoleTasks/Point2D.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +46,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/RGR1",
+    "last_opened_file_path": "D:/university/2course/CrossPlatfP/RGR1/src/jfreechart-1.0.19.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
