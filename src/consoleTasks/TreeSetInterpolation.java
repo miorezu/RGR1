@@ -6,12 +6,12 @@ import java.util.Scanner;
 import java.util.TreeSet;
 
 public class TreeSetInterpolation extends Interpolator {
-    private TreeSet<Point2D> data = new TreeSet<>();
+    private TreeSet<PointData> data = new TreeSet<>();
 
     public TreeSetInterpolation() {
     }
 
-    public TreeSetInterpolation(TreeSet<Point2D> data) {
+    public TreeSetInterpolation(TreeSet<PointData> data) {
         this.data = data;
     }
 
@@ -19,20 +19,20 @@ public class TreeSetInterpolation extends Interpolator {
         data.clear();
     }
 
-    public void addPoint(Point2D pt) {
+    public void addPoint(PointData pt) {
         data.add(pt);
     }
 
-    public Point2D getPoint(int i) {
-        Iterator<Point2D> it = data.iterator();
-        Point2D curr = null;
+    public PointData getPoint(int i) {
+        Iterator<PointData> it = data.iterator();
+        PointData curr = null;
         for (int n = 0; it.hasNext() && n <= i; n++) {
             curr = it.next();
         }
         return curr;
     }
 
-    public void setPoint(int i, Point2D pt) {
+    public void setPoint(int i, PointData pt) {
         data.add(pt);
     }
 
@@ -61,7 +61,7 @@ public class TreeSetInterpolation extends Interpolator {
 
         for (int i = 0; i < num; i++) {
             x = 1.0 + (5.0 - 1.0) * Math.random();
-            fun.addPoint(new Point2D(x, Math.sin(x)));
+            fun.addPoint(new PointData(x, Math.sin(x)));
         }
 
         System.out.println("Інтерполяція по: " + fun.numPoints() + " точкам");
@@ -110,11 +110,10 @@ public class TreeSetInterpolation extends Interpolator {
         System.out.println("Готуємо дані для розрахунку");
         fun.clear();
         for (x = 1.0; x <= 7.0; x += 0.1) {
-            fun.addPoint(new Point2D(x, Math.sin(x)));
+            fun.addPoint(new PointData(x, Math.sin(x)));
         }
         try {
             FileManager.writeToFile("TblFunTreeSet.csv", fun);
-            FileManager.writeToFile("TblFunTreeSet.dat", fun);
         } catch (IOException ex) {
             ex.printStackTrace();
             System.exit(-1);

@@ -45,7 +45,7 @@ public class NumMethods {
         } while (num <= 0);
         for (int i = 0; i < num; i++) {
             x += step;
-            fun.addPoint(new Point2D(x, Math.sin(x)));
+            fun.addPoint(new PointData(x, Math.sin(x)));
         }
         x = 0.5 * (fun.getPoint(0).getX() +
                 fun.getPoint(fun.numPoints() - 1).getX());

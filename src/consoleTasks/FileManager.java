@@ -1,14 +1,10 @@
 package consoleTasks;
 
-import java.io.*;
-import java.util.StringTokenizer;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public abstract class FileManager {
 
@@ -21,7 +17,7 @@ public abstract class FileManager {
             String[] values = line.split(";");
             double x = Double.parseDouble(values[0]);
             double y = Double.parseDouble(values[1]);
-            listInt.addPoint(new Point2D(x, y));
+            listInt.addPoint(new PointData(x, y));
         }
         reader.close();
     }
@@ -30,7 +26,7 @@ public abstract class FileManager {
         BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
         writer.write("x,y\n");
         for (int i = 0; i < listInt.numPoints(); i++) {
-            Point2D point = listInt.getPoint(i);
+            PointData point = listInt.getPoint(i);
             writer.write(point.getX() + ";" + point.getY() + "\n");
         }
         writer.close();

@@ -5,11 +5,11 @@ public abstract class Interpolator implements Evaluatable {
 
     abstract public int numPoints();
 
-    abstract public void addPoint(Point2D pt);
+    abstract public void addPoint(PointData pt);
 
-    abstract public Point2D getPoint(int i);
+    abstract public PointData getPoint(int i);
 
-    abstract public void setPoint(int i, Point2D pt);
+    abstract public void setPoint(int i, PointData pt);
 
     abstract public void removeLastPoint();
 

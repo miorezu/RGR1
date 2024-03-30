@@ -22,11 +22,11 @@ public class TreeMapInterpolation extends Interpolator {
         return data.size();
     }
 
-    public void addPoint(Point2D pt) {
+    public void addPoint(PointData pt) {
         data.put(pt.getX(), pt.getY());
     }
 
-    public Point2D getPoint(int i) {
+    public PointData getPoint(int i) {
         if (i < 0 || data.size() <= i) {
             throw new IndexOutOfBoundsException("IndexOutOfBoundsException");
         }
@@ -37,10 +37,10 @@ public class TreeMapInterpolation extends Interpolator {
         }
         double x = e.getKey();
         double y = e.getValue();
-        return new Point2D(x, y);
+        return new PointData(x, y);
     }
 
-    public void setPoint(int i, Point2D pt) {
+    public void setPoint(int i, PointData pt) {
         data.put(pt.getX(), pt.getY());
     }
 
@@ -68,7 +68,7 @@ public class TreeMapInterpolation extends Interpolator {
 
         for (int i = 0; i < num; i++) {
             x = 1.0 + (5.0 - 1.0) * Math.random();
-            fun.addPoint(new Point2D(x, Math.sin(x)));
+            fun.addPoint(new PointData(x, Math.sin(x)));
         }
 
         System.out.println("Інтерполяція по: " + fun.numPoints() + " точкам");
@@ -117,11 +117,10 @@ public class TreeMapInterpolation extends Interpolator {
         System.out.println("Готуємо дані для розрахунку");
         fun.clear();
         for (x = 1.0; x <= 7.0; x += 0.1) {
-            fun.addPoint(new Point2D(x, Math.sin(x)));
+            fun.addPoint(new PointData(x, Math.sin(x)));
         }
         try {
             FileManager.writeToFile("TblFunTreeMap.csv", fun);
-            FileManager.writeToFile("TblFunTreeMap.dat", fun);
         } catch (IOException ex) {
             ex.printStackTrace();
             System.exit(-1);
